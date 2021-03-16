@@ -1,0 +1,23 @@
+{
+  "name": "redux-coverage-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kajitaku/redux-coverage-sample.git"
+  },
+  "keywords": [],
+  "author": "Takuya Kajiyama <dev.kajiyama@gmail.com> (https://github.com/Kajitaku)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kajitaku/redux-coverage-sample/issues"
+  },
+  "homepage": "https://github.com/Kajitaku/redux-coverage-sample#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

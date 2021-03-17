@@ -1,5 +1,13 @@
-const sum = require('../sum');
+const t = require('../sum');
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1, 2)).toBe(3);
+describe('t関数のStmts100%', () => {
+    it('Case1', () => {
+        expect(t(1, 0, 1, 0)).toStrictEqual(['A', 'B']);
+
+    });
+
+    it('Case2', () => {
+        expect(t(1, 0, 0, 0)).toStrictEqual(['A', '~B']);
+
+    });
 });

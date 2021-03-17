@@ -30,11 +30,11 @@ jobs:
       #     pkg-manager: yarn 
       - run:
           name: Run tests
-          command: npm test
-
-      - run: # カバレッジ レポートを実行します
-          name: code-coverage
           command: npm run coverage
+
+      - store_artifacts:
+          path: coverage
+
       - store_artifacts: # テスト結果をアーティファクトとして保存する特別なステップ
           # アーティファクト (https://circleci.com/ja/docs/2.0/artifacts/) に表示するテスト サマリーをアップロードします
           path: test-results.xml

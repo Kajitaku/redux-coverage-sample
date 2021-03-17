@@ -30,7 +30,20 @@ jobs:
       #     pkg-manager: yarn 
       - run:
           name: Run tests
-          command: npm test
+          command: npm run coverage
+
+      - store_artifacts:
+          path: coverage
+
+      - store_artifacts: # テスト結果をアーティファクトとして保存する特別なステップ
+          # アーティファクト (https://circleci.com/ja/docs/2.0/artifacts/) に表示するテスト サマリーをアップロードします
+          path: test-results.xml
+          prefix: tests
+      - store_artifacts: # アーティファクト (https://circleci.com/ja/docs/2.0/artifacts/) に表示するため
+          path: coverage
+          prefix: coverage
+      - store_test_results: # テスト サマリー (https://circleci.com/ja/docs/2.0/collect-test-data/) に表示するため
+          path: test-results.xml
 
 workflows:
   # Below is the definition of your workflow.
